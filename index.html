@@ -52,21 +52,26 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Learning-based Bayesian Inference for Testing of Autonomous Systems</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Anjali Parashar</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Ji Yin</a><sup>2</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Charles Dawson</a><sup>1</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="FOURTH AUTHOR PERSONAL LINK" target="_blank">Panagiotis Tsiotras</a><sup>2</sup>,
+                  </span><span class="author-block">
+                    <a href="FIFTH AUTHOR PERSONAL LINK" target="_blank">Chuchu Fan</a><sup>1</sup>,
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block"><br><sup>1</sup>MIT</span>
+                    <span class="author-block"><br><sup>2</sup>Georgia Tech</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -93,17 +98,6 @@
                     </a>
                   </span>
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
@@ -122,6 +116,23 @@
   </div>
 </section>
 
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/intro.png" alt="Method Description"/>
+        <h2 class="subtitle has-text-centered">
+          Overview of our approach. We use learning-based Bayesian inference to find failure modes of a robotic system by finding environmental agents such as obstacles, reference paths that lead to failure. 
+        </h2>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
 
 <!-- Teaser video-->
 <section class="hero teaser">
@@ -147,16 +158,14 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+          <p>For safe operation of robotic systems, it is important to accurately understand its failure modes using prior testing. Hardware testing of robotic infrastructure is known to be extremely slow and costly. Instead, failure prediction in simulation can help in analyzing the system before deployment. Conventionally, large-scale na\"ive Monte Carlo simulations are used for testing; however, this method is only suitable for testing average system performance. For safety-critical systems, worst-case performance is more crucial as failures are often rare events, and the size of test batches increases substantially to discover rare occurrences of failures. Rare-event sampling methods can be helpful; however, they exhibit slow convergence and cannot handle constraints. 
+            This research introduces a novel sampling-based testing framework for autonomous systems which bridges these gaps by utilizing a discretized gradient-based second-order Langevin algorithm combined with learning-based techniques for constrained sampling of failure modes. Our method can predict more diverse failures by exploring the search space efficiently and ensures feasibility with respect to temporal and implicit constraints. We demonstrate the application of our testing methodology on two categories of testing problems, via simulations and hardware experiments. Our method discovers upto 2X failures compared to naive Random Walk sampling, with only half of the sample size.      </p>
         </div>
       </div>
     </div>
   </div>
 </section>
 <!-- End paper abstract -->
-
 
 <!-- Image carousel -->
 <section class="hero is-small">
@@ -165,16 +174,16 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/NPO.png" width='400', height ='400' alt="Neural Projection Operator"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Neural Projection Operator (NPO): We use binary classifier to learn decision boundaries alongwith gradient-based projection for ensuring constraint feasibility of low dimensional environment variable. Fig shows the application of NPO on static obstacles that should be present around a given racetrack
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/Latent_VAE.png" width='400', height ='400' alt="Learning Sequence EVs using AutoEncoder"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Latent Variable Encoding: We use this approach for desigining sequences that must be temporally consistent and represent realistic environment variables using an AutoEncoder that learns the frequency-domain representation of control input signals.
         </h2>
       </div>
       <div class="item">
@@ -196,83 +205,6 @@
 </div>
 </section>
 <!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
